@@ -1,0 +1,205 @@
+/*  setups & fonts */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    overflow-x: hidden;
+    background: linear-gradient(180deg, #281EFF 0%, #2DFF8C 100%);
+}
+
+@font-face {
+    font-family: "Satisfy";
+    src: url("../../fonts/Satisfy-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Heebo";
+    src: url("../../fonts/Heebo-VariableFont_wght.ttf");
+}
+
+/* loading */
+/* loading */
+/* loading */
+#loadingAnimationDiv {
+    margin: 0 auto;
+    width: 31.25vw;
+    margin-top: 15.5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 18pt;
+    font-family: "Heebo";
+    color: #fff;
+    transition: opacity 1s;
+    opacity: 1;
+}
+
+#loadingAnimationDiv div {
+    width: 10vw;
+    height: 10vw;
+    border: 16px solid #2DFF8C;
+    border-right-color: #fff;
+    border-radius: 50%;
+    animation: spin 2s infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* container & h1 & h3 & p */
+#container {
+    width: 57vw;
+    height: 21vw;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    margin-top: 17.5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+#container h1 {
+    font-size: 8.3vw;
+    font-family: 'Satisfy';
+}
+
+h3 {
+    font-size: 1.6vw;
+}
+
+/* form */
+form {
+    width: 57vw;
+    height: 3.8vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align-last: left;
+    margin-top: 2vw;
+}
+
+form button.btn {
+    width: 10.7vw;
+    height: 2.6vw;
+    background-color: #fff;
+    color: #000;
+    border-radius: 0;
+    transition: background-color 0.5s;
+    border: none;
+    margin-left: 1vw;
+    margin-top: 0.9vw;
+    font-size: 0.83vw;
+}
+
+form button.btn:hover {
+    background-color: #281EFF;
+}
+
+form input.form-control {
+    width: 21.7vw;
+    height: 2.6vw;
+    border-radius: 0;
+    background-color: #f6f6f626;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+form input.form-control:focus {
+    background-color: #f6f6f626;
+}
+
+form input#exampleInputPassword1 {
+    margin-left: 2vw;
+}
+
+form label[for="exampleInputPassword1"] {
+    margin-left: 2vw;
+}
+
+/* responsive */
+/* responsive */
+@media (max-width:600px) {
+
+    /* loading */
+    /* loading */
+    /* loading */
+    #loadingAnimationDiv {
+        margin: 0 auto;
+        width: 300px;
+        margin-top: 100px;
+    }
+
+    #loadingAnimationDiv div {
+        width: 100px;
+        height: 100px;
+        font-size: 10pt;
+    }
+
+    /* container & h1 & h3 & p */
+    #container {
+        width: 88.3vw;
+        height: 125vw;
+    }
+
+    #container h1 {
+        font-size: 12.2vw;
+    }
+
+    h3 {
+        font-size: 4.8vw;
+    }
+
+    p {
+        font-size: 4.3vw;
+    }
+
+    /* form */
+    form {
+        width: 88.3vw;
+        height: 45.4vw;
+        display: flex;
+        flex-direction: column;
+        margin-top: 2vw;
+        text-align: none;
+    }
+
+    form button.btn {
+        width: 88.3vw;
+        height: 9.4vw;
+        margin: 0;
+        font-size: 2.9vw;
+        color: #2823FD;
+    }
+
+    form input.form-control {
+        width: 88.3vw;
+        height: 9.4vw;
+        border-radius: 0;
+        background-color: #f6f6f626;
+        color: #fff;
+        border: 1px solid #fff;
+    }
+
+    form input#exampleInputPassword1 {
+        margin-left: 2vw;
+    }
+
+    form label[for="exampleInputPassword1"] {
+        margin-left: 2vw;
+    }
+}

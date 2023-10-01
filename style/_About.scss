@@ -1,0 +1,127 @@
+#About {
+    width: 100vw;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #0078B7;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    top: 79px;
+}
+
+#About img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+#About h1 {
+    font-size: 40pt;
+}
+
+#About p {
+    font-size: calc(0.5vw + 10px);
+    width: 60vw;
+    text-align: left;
+    margin-left: 20vw;
+}
+
+#About p .oneTab {
+    margin-left: 5vw;
+    font-weight: 600;
+    transition: color 0.5s, font-weight 0.5s;
+    cursor: default;
+}
+
+#About p .oneTab:hover {
+    color: #000;
+    font-weight: 1000;
+}
+
+#About p .twoTab {
+    margin-left: 10vw;
+}
+
+#About p .mainH {
+    font-weight: bold;
+    transition: font-weight 0.5s;
+    cursor: default;
+}
+
+#About p .mainH:hover {
+    font-weight: normal;
+}
+
+#About p .languages {
+    font-weight: bold;
+    color: #000;
+    transition: color 0.5s, font-weight 0.5s;
+    cursor: default;
+}
+
+#About p .languages:hover {
+    color: #0078B7;
+    font-weight: normal;
+}
+
+#About a {
+    width: 300px;
+    height: 40px;
+    margin-top: 40px;
+    background-color: #033E8A;
+    color: #CAF1F8;
+    border-radius: 15px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#About a:hover {
+    background-color: #CAF1F8;
+    color: #033E8A;
+}
+
+/* responsive */
+/* responsive */
+/* responsive */
+/* responsive */
+/* responsive */
+@media (max-width:630px) {
+    #About {
+        width: 100vw;
+        height: 400px;
+        padding-top: 0;
+        top: 59px;
+    }
+
+    #About img {
+        width: 50px;
+        height: 50px;
+    }
+
+    #About h1 {
+        font-size: 20pt;
+    }
+
+    #About p {
+        width: 90vw;
+        margin-left: 0;
+        font-size: 2vw;
+    }
+
+    #About a {
+        width: 200px;
+        height: 30px;
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+    #About a:hover {
+        background-color: #CAF1F8;
+        color: #033E8A;
+    }
+}

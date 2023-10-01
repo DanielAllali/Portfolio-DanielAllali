@@ -1,0 +1,133 @@
+footer {
+    width: 100vw;
+    height: 10.4vw;
+    background-color: #0078B7;
+    position: relative;
+    top: 80px;
+}
+
+footer .iconsDiv {
+    background-color: #0078B7;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(6, calc(3.12vw + 60px));
+    grid-template-rows: 3.125vw 4.16vw 3.125vw;
+    justify-content: space-around;
+}
+
+footer .Icon h3 {
+    font-size: calc(0.4vw + 5px);
+    margin-top: 10px;
+}
+
+footer .Icon {
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .icon1 {
+    grid-column: 1;
+}
+
+footer .icon2 {
+    grid-column: 2;
+}
+
+footer .icon3 {
+    grid-column: 3;
+}
+
+footer .icon4 {
+    grid-column: 4;
+}
+
+footer .icon5 {
+    grid-column: 5;
+}
+
+footer .icon6 {
+    grid-column: 6;
+}
+
+.copyRight {
+    width: 100vw;
+    background-color: black;
+    border-bottom: 3px solid #0078B7;
+    color: white;
+    padding-left: 20px;
+    padding-top: 5px;
+}
+
+.copyRight h3 {
+    font-size: 11pt;
+}
+
+/* responsive */
+/* responsive */
+/* responsive */
+/* responsive */
+/* responsive */
+@media (max-width:630px) {
+    footer {
+        width: 100vw;
+        height: none;
+        top: 60px;
+    }
+
+    footer .iconsDiv {
+        grid-template-columns: repeat(2, 19vw);
+        grid-template-rows: repeat(3, 22.5vw);
+        justify-content: space-around;
+    }
+
+    footer .Icon h3 {
+        font-size: 2vw;
+        margin-top: 10px;
+    }
+
+    footer .icon1 {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    footer .icon2 {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    footer .icon3 {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    footer .icon4 {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    footer .icon5 {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    footer .icon6 {
+        grid-column: 2;
+        grid-row: 3;
+    }
+
+    .copyRight {
+        width: 100vw;
+        background-color: black;
+        border-bottom: 3px solid #0078B7;
+        color: white;
+        padding-left: 20px;
+        padding-top: 5px;
+    }
+
+    .copyRight h3 {
+        font-size: 11pt;
+    }
+}

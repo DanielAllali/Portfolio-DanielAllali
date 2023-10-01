@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Heebo';
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+#allPage {
+    display: none;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+@font-face {
+    font-family: 'Heebo';
+    src: url('../fonts/Heebo-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-family: 'Satisfy';
+    src: url('../fonts/Satisfy-Regular.ttf');
+}

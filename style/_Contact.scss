@@ -1,0 +1,123 @@
+#contact {
+    width: 100vw;
+    background-color: #3a3a3a;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: start;
+    color: white;
+    position: relative;
+    top: 80px;
+}
+
+#contact img {
+    order: 2;
+    width: 40vw;
+}
+
+#contact form {
+    order: 1;
+    width: 35vw;
+    margin-top: 8.3vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#contact h1 {
+    font-weight: bold;
+}
+
+#contact p {
+    margin-bottom: 40px;
+    font-size: calc(0.5vw + 10px);
+}
+
+#contact label {
+    font-weight: bold;
+    margin: 0;
+}
+
+#contact input {
+    width: calc(14.3vw + 225px);
+    height: calc(1.3vw + 25px);
+    margin-bottom: 1vw;
+    border: none;
+    border-bottom: 4px solid #0078B7;
+    padding: 5px;
+}
+
+#contact #message {
+    height: calc(2.45vw + 50px);
+    width: calc(14.3vw + 225px);
+    margin-bottom: 1vw;
+    border: none;
+    border-bottom: 4px solid #0078B7;
+    padding: 5px;
+    resize: none;
+}
+
+#contact input[type="button"] {
+    width: 8.6vw;
+    height: calc(1.3vw + 25px);
+    border-radius: 25px;
+    background-color: #0078B7;
+    color: white;
+    border: 2px solid #0078B7;
+    transition: background-color 0.5s, color 0.5s;
+    font-weight: bold;
+    font-size: calc(0.5vw + 10px);
+}
+
+#contact input[type="button"]:hover {
+    background-color: #fff;
+    color: #0078B7;
+}
+
+/* responsive */
+/* responsive */
+/* responsive */
+/* responsive */
+@media (max-width:630px) {
+    #contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        top: 60px;
+    }
+
+    #contact img {
+        order: 1;
+        width: 50vw;
+    }
+
+    #contact form {
+        order: 2;
+        width: 80vw;
+        margin-bottom: 25px;
+    }
+
+
+    #contact label {
+        font-weight: bold;
+        margin: 0;
+    }
+
+    #contact input {
+        width: 80vw;
+        height: 7vw;
+    }
+
+    #contact #message {
+        width: 80vw;
+        height: 14vw;
+    }
+
+    #contact input[type="button"] {
+        width: 25vw;
+        height: 7vw;
+        font-size: calc(1vw + 10px);
+    }
+
+}

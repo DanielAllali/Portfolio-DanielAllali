@@ -1,0 +1,171 @@
+#Gallery {
+    width: 100vw;
+    background: linear-gradient(to bottom, white, #0078B7, #0078B7, #0078B7, #0078B7, #0078B7);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    position: relative;
+    top: 80px;
+}
+
+#Gallery h1 {
+    font-weight: 850;
+}
+
+#Gallery>p {
+    width: 35vw;
+}
+
+#Gallery .works {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#Gallery .CARD {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100vw;
+
+    background: none;
+}
+
+#Gallery .card {
+    width: 25vw !important;
+    margin-bottom: 10vw;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 3px 3px 15px #00456a;
+}
+
+
+#Gallery .project1 {
+    order: 1;
+}
+
+#Gallery .project2 {
+    order: 2;
+}
+
+#Gallery .card .tools img {
+    width: calc(1.3vw + 5px);
+}
+
+#Gallery .card img[src$="Img.png"] {
+    width: 25vw;
+    height: 13vw;
+    margin-bottom: 3vw;
+    margin-top: -1px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+#Gallery .card h5 {
+    font-size: 2vw;
+    margin-bottom: 1vw;
+    font-weight: bold;
+}
+
+#Gallery .card p {
+    font-size: 1vw;
+    width: 24vw;
+    margin-bottom: 0;
+}
+
+
+
+#Gallery .works a {
+    order: 4;
+    width: 10vw;
+    height: 2vw;
+    background-color: #0078B7;
+    color: white;
+    font-weight: bold;
+    font-size: 1vw;
+    transition: background-color 1s;
+    margin-top: 0.52vw;
+    padding-bottom: 2vw;
+    border-radius: 25px;
+}
+
+#Gallery .works a:hover {
+    background-color: #fff;
+    color: #0078B7;
+}
+
+/* responsive */
+/* responsive */
+/* responsive */
+/* responsive */
+/* responsive */
+@media (max-width:630px) {
+    #Gallery {
+        top: 60px;
+    }
+
+    #Gallery h1 {
+        font-weight: 850;
+    }
+
+    #Gallery>p {
+        width: 80vw;
+    }
+
+    #Gallery .CARD {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #Gallery .card {
+        width: 90vw !important;
+    }
+
+    #Gallery .card .tools img {
+        width: 4vw;
+    }
+
+    #Gallery .card img[src$="Img.png"] {
+        width: 90vw;
+        height: 40vw;
+        margin-bottom: 0;
+    }
+
+    #Gallery .card h5 {
+        font-size: 5vw;
+        margin-bottom: 1vw;
+        font-weight: bold;
+    }
+
+    #Gallery .card p {
+        font-size: 3vw;
+        width: 85vw;
+    }
+
+
+
+    #Gallery .works a {
+        width: 40vw;
+        height: 5vw;
+        font-size: 3vw;
+        padding-top: 0;
+    }
+
+    #Gallery .works a:hover {
+        background-color: #fff;
+        color: #0078B7;
+    }
+}
+
+.collusionDiv {
+    width: 100vw;
+    height: 200px;
+    background: linear-gradient(to bottom, #0078B7, #f6f6f6);
+}

@@ -1,0 +1,54 @@
+#loadingAnimationDiv {
+    margin: 0 auto;
+    width: 31.25vw;
+    margin-top: 15.5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 18pt;
+    font-family: "Heebo";
+    color: #FDBD03;
+    transition: opacity 1s;
+    opacity: 1;
+}
+
+#loadingAnimationDiv div {
+    width: 10vw;
+    height: 10vw;
+    border: 16px solid #E5EEFF;
+    border-right-color: #FDBD03;
+    border-radius: 50%;
+    animation: spin 2s infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* responive responive responive responive responive*/
+/* responive responive responive responive responive*/
+/* responive responive responive responive responive*/
+/* responive responive responive responive responive*/
+/* responive responive responive responive responive*/
+/* responive responive responive responive responive*/
+/* responive responive responive responive responive*/
+/* responive responive responive responive responive*/
+@media (max-width:600px) {
+    #loadingAnimationDiv {
+        margin: 0 auto;
+        width: 300px;
+        margin-top: 100px;
+        font-size: 0.8rem;
+    }
+
+    #loadingAnimationDiv div {
+        width: 100px;
+        height: 100px;
+    }
+}

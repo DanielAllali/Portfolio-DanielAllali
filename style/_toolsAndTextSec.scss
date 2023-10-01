@@ -1,0 +1,100 @@
+.toolsAndText {
+    overflow: hidden;
+    width: 100vw;
+    height: 420px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 80px;
+    z-index: 3;
+    background: linear-gradient(to right, #0078B7, white, white, white);
+    background-position: 0%;
+    transition: border-bottom 0.5s;
+    border-bottom: 3px solid #fff;
+    margin-bottom: 3px;
+}
+
+.toolsAndText:hover {
+    border-bottom-color: #0078B7;
+}
+
+.toolsAndText div.textDiv {
+    width: 50vw;
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding-top: 3vw;
+}
+
+.toolsAndText div.textDiv h1 {
+    font-size: 6vw;
+}
+
+.toolsAndText div.textDiv p {
+    font-size: 16pt;
+    width: 40vw;
+}
+
+.toolsAndText img {
+    width: 10vw;
+    transition: box-shadow 0.5s, transform 0.5s;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.toolsAndText img:hover {
+    box-shadow: 3px 3px 3px 3px #aaa;
+    transform: scale(1.1);
+}
+
+.toolsAndText a {
+    text-decoration: none;
+}
+
+
+.toolsAndText div.toolsDiv {
+    width: 50vw;
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* responsive */
+/* responsive */
+/* responsive */
+/* responsive */
+/* responsive */
+@media (max-width:630px) {
+    .toolsAndText {
+        height: 200px;
+        top: 60px;
+    }
+
+    .toolsAndText div.textDiv {
+        height: 200px;
+        margin-top: 10vw;
+    }
+
+    .toolsAndText div.textDiv h1 {
+        font-weight: bold;
+    }
+
+    .toolsAndText div.textDiv p {
+        font-size: 0.7rem;
+    }
+
+    .toolsAndText img {
+        width: 15vw;
+    }
+
+    .toolsAndText div.toolsDiv {
+        height: 200px;
+    }
+}

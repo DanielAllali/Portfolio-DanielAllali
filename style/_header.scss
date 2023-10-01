@@ -1,0 +1,156 @@
+header {
+    width: 100vw;
+    height: 80px;
+    padding-right: 5vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0.5px 20px #000;
+    background: linear-gradient(to right, white, white, #0078B7);
+}
+
+header nav {
+    order: 1;
+    margin-left: 7vw;
+    height: 80px;
+}
+
+header nav h1.responsiveUl {
+    display: none;
+}
+
+header nav ul {
+    width: 40vw;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+header ul li a {
+    color: black;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.5s;
+}
+
+header ul li a:hover {
+    text-decoration: none;
+    color: #91E0EF;
+}
+
+header ul li a[href^="#top"] {
+    color: #0078B7;
+}
+
+header ul li a[href^="#top"]:hover {
+    text-decoration: underline;
+}
+
+header .profile {
+    order: 2;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+header .profile h1 {
+    order: 1;
+    font-family: "Satisfy";
+    font-size: 15pt;
+    margin-right: 1vw;
+    color: white;
+    cursor: pointer;
+}
+
+header .profile h1:hover {
+    text-decoration: underline;
+}
+
+header .profile img {
+    order: 2;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+
+/* responsive */
+/* responsive */
+/* responsive */
+/* responsive */
+/* responsive */
+@media (max-width:630px) {
+    header {
+        height: 60px;
+    }
+
+    header nav {
+        order: 1;
+        margin-left: 0;
+        height: 60px;
+        display: flex;
+        align-items: start;
+        justify-content: center;
+    }
+
+    header nav ul {
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+    }
+
+    header ul li {
+        display: none;
+    }
+
+    header nav ul h1 li {
+        display: block;
+    }
+
+    header nav ul h1 li {
+        display: block;
+    }
+
+    header nav h1.responsiveUl {
+        width: 60px;
+        height: 35px;
+        font-size: 20pt;
+        margin-top: 3vw;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        transform-origin: top bottom;
+        transition: height 1s, background-color 1s;
+        cursor: pointer;
+    }
+
+    header nav h1.responsiveUl:hover {
+        margin-top: 10vw;
+        height: 170px;
+        background-color: #fff;
+    }
+
+    header .profile {
+        height: 60px;
+    }
+
+    header .profile h1 {
+        background: linear-gradient(to right, #0078B7, white, white, white);
+        background-clip: text;
+        color: transparent;
+    }
+
+    header .profile img {
+        width: 50px;
+    }
+}

@@ -1,0 +1,282 @@
+/* Setups & Fonts */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Heebo";
+}
+
+body {
+    overflow-x: hidden;
+}
+
+@font-face {
+    font-family: "Satisfy";
+    src: url("../../../fonts/Satisfy-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Heebo";
+    src: url("../../../fonts/Heebo-VariableFont_wght.ttf");
+}
+
+/* header */
+/* header */
+header {
+    width: 100vw;
+    height: 5.55vw;
+    border-top: 2px solid #1AE0EC;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+header nav {
+    order: 1;
+    width: 25vw;
+    height: 2vw;
+}
+
+header nav ul li.responsiveUl {
+    display: none;
+}
+
+header nav ul {
+    display: flex;
+    flex-direction: row;
+    font-size: 1.6vw;
+    list-style-type: none;
+}
+
+header nav ul li {
+    margin-left: 2vw;
+}
+
+header nav ul li a {
+    color: #000;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+header nav ul li a:hover {
+    color: #1AE0EC;
+}
+
+header nav ul li a[href^="#main"] {
+    color: #1AE0EC;
+}
+
+header .profile {
+    order: 2;
+    width: 15vw;
+    height: 2vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: 40vw;
+}
+
+header .profile h1 {
+    order: 1;
+    font-size: 15pt;
+    font-weight: 400;
+    font-family: "Satisfy";
+}
+
+header .profile img {
+    order: 2;
+    width: 4.3vw;
+    height: 4.3vw;
+    border-radius: 50%;
+    margin-left: 1.5vw;
+}
+
+/* review section */
+/* review section */
+.reviewSec {
+    width: 100vw;
+    height: 28vw;
+    background-color: #13E8F163;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    color: #000;
+}
+
+.reviewSec h1 {
+    order: 1;
+    font-size: 4.1vw;
+    margin-top: 5.2vw;
+}
+
+.reviewSec p {
+    order: 2;
+    width: 44vw;
+    font-size: 1vw;
+    text-align: center;
+    margin-bottom: 1.4vw;
+}
+
+.reviewSec div {
+    order: 3;
+    width: 17vw;
+    height: 1.56vw;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.reviewSec div a {
+    width: 8vw;
+    height: 1.5vw;
+    border-radius: 15px;
+    border: none;
+    font-size: 0.8svw;
+    background-color: #1AE0EC;
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reviewSec div a:hover {
+    background-color: #19f4ff;
+}
+
+/* tootls section */
+/* tootls section */
+.toolsSec {
+    width: 100vw;
+    height: 6.77vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 3px 6px #00000029;
+    position: relative;
+    z-index: 2;
+}
+
+.toolsSec img {
+    width: 5.2vw;
+    height: 5.2vw;
+    border-radius: 50%;
+    transition: box-shadow 0.5s;
+}
+
+.toolsSec img:hover {
+    box-shadow: 2px 2px 2px 2px #aaa;
+}
+
+/* display section */
+/* display section */
+.displaySec {
+    width: 100vw;
+    height: 52.8vw;
+    background-color: #EBFEFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.displaySec img {
+    order: 1;
+    width: 70vw;
+    height: 37.5vw;
+}
+
+/* footer */
+/* footer */
+footer {
+    width: 100vw;
+    height: 51px;
+    background-color: black;
+    border-bottom: 4px solid #1AE0EC;
+    color: #1AE0EC;
+    font-size: 7pt;
+    display: flex;
+    align-items: center;
+    text-align-last: left;
+    padding-left: 50px;
+}
+
+/* responsive */
+/* responsive */
+/* responsive */
+/* responsive */
+/* responsive */
+@media (max-width:620px) {
+
+    /* header */
+    /* header */
+    header nav ul li {
+        display: none;
+    }
+
+    header nav ul li h1 {
+        font-size: 3vw;
+    }
+
+    header nav ul li.responsiveUl {
+        height: 4vw;
+        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        overflow-y: hidden;
+        transition: height 1s ease-in-out;
+    }
+
+    header nav ul li.responsiveUl:hover {
+        height: 25vw;
+    }
+
+    header nav ul li.responsiveUl ul li {
+        display: block;
+    }
+
+    header nav {
+        order: 1;
+        margin-left: -5vw;
+        margin-top: -2vw;
+    }
+
+    header nav ul {
+        display: flex;
+        flex-direction: column;
+        font-size: 3vw;
+        list-style-type: none;
+    }
+
+    header .profile h1 {
+        font-size: 2vw;
+    }
+
+    /* review section */
+    /* review section */
+    .reviewSec h1 {
+        font-size: 6vw;
+    }
+
+    .reviewSec p {
+        font-size: 1.5vw;
+    }
+
+    .reviewSec div {
+        width: 21vw;
+        height: 1.7vw;
+    }
+
+    .reviewSec div a {
+        width: 10vw;
+        height: 1.7vw;
+        font-size: 1vw;
+    }
+}

@@ -1,0 +1,95 @@
+#loadingDiv {
+    width: 100vw;
+    height: 40vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+#loadingDiv .circle {
+    width: 200px;
+    height: 200px;
+    border: 15px solid #ccc;
+    border-right-color: black;
+    border-radius: 50%;
+    animation: spin 2s infinite, color 2s infinite;
+}
+
+@keyframes color {
+    0% {
+        border-right-color: red;
+    }
+
+    14% {
+        border-right-color: orange;
+    }
+
+    28% {
+        border-right-color: yellow;
+    }
+
+    42% {
+        border-right-color: green;
+    }
+
+    57% {
+        border-right-color: blue;
+    }
+
+    71% {
+        border-right-color: indigo;
+    }
+
+    85% {
+        border-right-color: violet;
+    }
+
+    100% {
+        border-right-color: red;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* typing animation */
+.text {
+    font-size: 2em;
+    letter-spacing: 10px;
+    border-right: 4px solid #000;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3s steps(24) infinite, color 2s infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+/* responsive */
+/* responsive */
+/* responsive */
+@media (max-width:650px) {
+    #loadingDiv .circle {
+        width: 100px;
+        height: 100px;
+        border: 10px solid #ccc;
+    }
+
+    .text {
+        font-size: 2.5vw;
+    }
+}
