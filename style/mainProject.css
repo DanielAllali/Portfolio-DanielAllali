@@ -41,7 +41,7 @@ body {
   border: 15px solid #ccc;
   border-right-color: black;
   border-radius: 50%;
-  animation: spin 2s infinite, color 2s infinite;
+  animation: spin 2s infinite, color 3s infinite;
 }
 
 @keyframes color {
@@ -86,7 +86,7 @@ body {
   width: 100%;
   white-space: nowrap;
   overflow: hidden;
-  animation: typing 3s steps(24) infinite, color 2s infinite;
+  animation: typing 3s steps(24) infinite, color 3s infinite;
 }
 
 @keyframes typing {
