@@ -85,19 +85,20 @@
     order: 4;
     width: 10vw;
     height: 2vw;
-    background-color: #0078B7;
-    color: white;
+    background: none;
+    color: #000;
+    border: 1px solid #000;
     font-weight: bold;
     font-size: 1vw;
-    transition: background-color 1s;
+    transition: background-color 0.2s;
     margin-top: 0.52vw;
-    padding-bottom: 2vw;
-    border-radius: 25px;
+    padding-bottom: 20px;
+    border-radius: 10px;
 }
 
 #Gallery .works a:hover {
-    background-color: #fff;
-    color: #0078B7;
+    background-color: #000;
+    color: #fff;
 }
 
 /* responsive */

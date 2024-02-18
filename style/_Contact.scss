@@ -60,18 +60,18 @@
 #contact input[type="button"] {
     width: 8.6vw;
     height: calc(1.3vw + 25px);
-    border-radius: 25px;
-    background-color: #0078B7;
-    color: white;
-    border: 2px solid #0078B7;
-    transition: background-color 0.5s, color 0.5s;
+    border-radius: 10px;
+    background: none;
+    color: #fff;
+    border: 1px solid #fff;
+    transition: background-color 0.2s, color 0.2s;
     font-weight: bold;
     font-size: calc(0.5vw + 10px);
 }
 
 #contact input[type="button"]:hover {
     background-color: #fff;
-    color: #0078B7;
+    color: #000;
 }
 
 /* responsive */

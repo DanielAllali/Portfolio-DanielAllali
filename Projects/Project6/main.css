@@ -19,12 +19,12 @@ body {
 /* loading */
 #loadingAnimationDiv {
     margin: 0 auto;
-    width: 31.25vw;
+    width: 60vw;
     margin-top: 15.5vw;
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 18pt;
+    font-size: 13pt;
     font-family: "Heebo";
     color: #020253;
     transition: opacity 1s;
@@ -52,14 +52,14 @@ body {
 
 /* page */
 #container {
-    width: 64.9vw;
-    height: 89.7vw;
+    width: 65vw;
+    height: 90vw;
     margin: 0 auto;
     margin-top: 5vw;
     margin-bottom: 5vw;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(14vw, 1fr);
+    grid-template-rows: repeat(6, 6fr);
     gap: 1vw;
     position: relative;
     opacity: 0;
@@ -178,6 +178,24 @@ body {
     font-family: "Heebo";
 }
 
+.formDiv h1 {
+    font-size: calc(1vw+5px);
+}
+
+.formDiv p {
+    font-size: calc(0.5vw+5px);
+}
+
+@media (max-width:920px) {
+    .formDiv h1 {
+        font-size: 2vw;
+    }
+
+    .formDiv p {
+        font-size: 1.2vw;
+    }
+}
+
 .formDiv form {
     width: 26vw;
     height: 26.5vw;
@@ -237,6 +255,7 @@ body {
         margin: 0 auto;
         width: 300px;
         margin-top: 100px;
+        font-size: 9pt;
     }
 
     #loadingAnimationDiv div {
@@ -250,13 +269,15 @@ body {
         height: 547.3vw;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(12, 1fr);
-        gap: 3.2vw;
+        gap: 4vw;
         margin: 0;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
     #container img {
-        width: 43.2vw;
-        height: 39.7vw;
+        width: 46vw;
+        height: 46vw;
         margin: 0;
     }
 
@@ -356,6 +377,14 @@ body {
         height: 76vw;
         font-size: 2.4vw;
         text-align: left;
+    }
+
+    .formDiv h1 {
+        font-size: 5vw;
+    }
+
+    .formDiv p {
+        font-size: 3vw;
     }
 
     .formDiv input {

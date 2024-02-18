@@ -1,6 +1,6 @@
 #About {
     width: 100vw;
-    height: 550px;
+    height: 600px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -41,18 +41,14 @@
     font-weight: 1000;
 }
 
-#About p .twoTab {
-    margin-left: 10vw;
-}
-
 #About p .mainH {
     font-weight: bold;
-    transition: font-weight 0.5s;
+    transition: color 0.2s;
     cursor: default;
 }
 
 #About p .mainH:hover {
-    font-weight: normal;
+    color: #000;
 }
 
 #About p .languages {
