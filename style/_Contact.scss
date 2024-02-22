@@ -47,6 +47,10 @@
     padding: 5px;
 }
 
+#contact input:focus {
+    border: none;
+}
+
 #contact #message {
     height: calc(2.45vw + 50px);
     width: calc(14.3vw + 225px);
@@ -67,6 +71,10 @@
     transition: background-color 0.2s, color 0.2s;
     font-weight: bold;
     font-size: calc(0.5vw + 10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 #contact input[type="button"]:hover {

@@ -67,18 +67,21 @@
     width: 300px;
     height: 40px;
     margin-top: 40px;
-    background-color: #033E8A;
-    color: #CAF1F8;
+    background: none;
+    color: black;
+    border: 2px solid #000;
     border-radius: 15px;
     font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: background-color 0.2s, color 0.2s;
 }
 
 #About a:hover {
-    background-color: #CAF1F8;
-    color: #033E8A;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
 }
 
 /* responsive */

@@ -1,0 +1,277 @@
+@font-face {
+    font-family: "regular";
+    src: url("./fonts/Oswald-VariableFont_wght.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "regular";
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url("./images/mainBgc.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* container */
+.container {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-around;
+    padding-right: 20vw;
+}
+
+/* stats */
+.stats {
+    margin-top: 20px;
+    border: 3px solid #000;
+    padding: 10px;
+}
+
+.stats h1 {
+    font-size: 3rem;
+    color: bisque;
+}
+
+.stats h1+h1 {
+    font-size: 1.5rem;
+}
+
+.stats h1+h1 span {
+    color: #000;
+}
+
+.stats button {
+    width: 10vw;
+    height: 50px;
+    font-size: 2rem;
+    cursor: pointer;
+    background-color: bisque;
+    color: #e27be2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.1s;
+}
+
+.stats button:hover {
+    background-color: #fedbaf;
+}
+
+
+/* boardNStaff */
+
+.boardNStaff {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: -35vw;
+}
+
+.boardNStaff .head {
+    text-align: center;
+}
+
+.boardNStaff .head h1 {
+    font-size: 5rem;
+    color: bisque;
+}
+
+.boardNStaff .head h1+h1 {
+    font-size: 3rem;
+}
+
+.boardNStaff .head h1 span {
+    color: #000;
+}
+
+/* board */
+
+.board {
+    width: 30vw;
+    height: 30vw;
+    border-collapse: collapse;
+    margin-top: 100px;
+}
+
+.board tr {
+    width: 30vw;
+    height: 10vw;
+}
+
+.board tr td img {
+    width: 7vw;
+    height: 7vw;
+    display: none;
+}
+
+.board tr td {
+    width: 10vw;
+    height: 10vw;
+    border: 5px solid #000;
+    padding: 1vw;
+    cursor: pointer;
+}
+
+.board tr td#cell1 {
+    border-left: none;
+    border-top: none;
+}
+
+.board tr td#cell2 {
+    border-top: none;
+}
+
+.board tr td#cell3 {
+    border-right: none;
+    border-top: none;
+}
+
+.board tr td#cell4 {
+    border-left: none;
+}
+
+.board tr td#cell6 {
+    border-right: none;
+}
+
+.board tr td#cell7 {
+    border-left: none;
+    border-bottom: none;
+}
+
+.board tr td#cell8 {
+    border-bottom: none;
+}
+
+.board tr td#cell9 {
+    border-right: none;
+    border-bottom: none;
+}
+
+/* win popup */
+
+#winPopup {
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(0);
+    opacity: 0;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -100px;
+    left: 0;
+    z-index: 999;
+    transition: backdrop-filter 1s, top 1s, opacity 1s;
+}
+
+#winPopup h1 {
+    font-size: 5rem;
+    color: #e27be2;
+}
+
+#winPopup button {
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+    background-color: bisque;
+    color: #e27be2;
+    border: 1px solid #282828;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+#winPopup button:hover {
+    background-color: #fedbaf;
+    transform: scale(1.1);
+}
+
+
+
+/* ----------------------------------------responsive---------------------------------------- */
+/* ----------------------------------------responsive---------------------------------------- */
+@media (max-width:1460px) {
+    .stats h1 {
+        font-size: 2rem;
+        color: bisque;
+    }
+
+    .stats h1+h1 {
+        font-size: 1rem;
+    }
+
+    .stats button {
+        width: 15vw;
+        height: 30px;
+        font-size: 1rem;
+    }
+
+    /* boardNStaff */
+
+    .boardNStaff {
+        margin-right: 0;
+    }
+
+    .boardNStaff .head h1 {
+        font-size: 3rem;
+    }
+
+    .boardNStaff .head h1+h1 {
+        font-size: 2rem;
+    }
+}
+
+/* ----------------------------------------responsive2---------------------------------------- */
+/* ----------------------------------------responsive2---------------------------------------- */
+@media (max-width:500px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-right: 0;
+    }
+
+    .board {
+        width: 60vw;
+        height: 60vw;
+        border-collapse: collapse;
+        margin-top: 100px;
+    }
+
+    .board tr {
+        width: 60vw;
+        height: 20vw;
+    }
+
+    .board tr td img {
+        width: 14vw;
+        height: 14vw;
+        display: none;
+    }
+
+    .board tr td {
+        width: 20vw;
+        height: 20vw;
+        border: 5px solid #000;
+        padding: 2vw;
+        cursor: pointer;
+    }
+
+    .stats button {
+        width: 60vw;
+        height: 30px;
+    }
+}

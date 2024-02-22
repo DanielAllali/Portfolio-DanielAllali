@@ -14,6 +14,8 @@ body {
   display: none;
   opacity: 0;
   transition: opacity 1s;
+  display: block;
+  opacity: 1;
 }
 
 @font-face {
@@ -33,6 +35,7 @@ body {
   align-items: center;
   opacity: 1;
   transition: opacity 1s;
+  display: none;
 }
 
 #loadingDiv .circle {
@@ -303,6 +306,12 @@ header .profile img {
   cursor: pointer;
 }
 
+.toolsAndText img[src*=typescript] {
+  width: 6vw;
+  margin-left: 15px;
+  border-radius: 1vw;
+}
+
 .toolsAndText img:hover {
   box-shadow: 3px 3px 3px 3px #aaa;
   transform: scale(1.1);
@@ -417,18 +426,21 @@ header .profile img {
   width: 300px;
   height: 40px;
   margin-top: 40px;
-  background-color: #033E8A;
-  color: #CAF1F8;
+  background: none;
+  color: black;
+  border: 2px solid #000;
   border-radius: 15px;
   font-weight: bold;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: background-color 0.2s, color 0.2s;
 }
 
 #About a:hover {
-  background-color: #CAF1F8;
-  color: #033E8A;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
 }
 
 /* responsive */
@@ -546,21 +558,29 @@ header .profile img {
 }
 
 #Gallery .works a {
+  background: none;
+  border: none;
+}
+
+#Gallery .works button {
   order: 4;
   width: 10vw;
   height: 2vw;
   background: none;
   color: #000;
-  border: 1px solid #000;
+  border: 2px solid #000;
   font-weight: bold;
   font-size: 1vw;
   transition: background-color 0.2s;
   margin-top: 0.52vw;
-  padding-bottom: 20px;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-#Gallery .works a:hover {
+#Gallery .works button:hover {
   background-color: #000;
   color: #fff;
 }
@@ -622,6 +642,120 @@ header .profile img {
   background: linear-gradient(to bottom, #0078B7, #f6f6f6);
 }
 
+#worksJS {
+  width: 100vw;
+  background-color: #fff;
+  padding-bottom: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 80px;
+}
+
+#worksJS > h1 {
+  font-size: 5rem;
+  color: black;
+  border-bottom: 2px solid #000;
+  margin-bottom: 20px;
+  order: 1;
+}
+
+#worksJS .cards {
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  order: 2;
+}
+
+#worksJS .cards .cardRow {
+  width: 90vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+
+#worksJS .cards .cardJS {
+  width: 25vw;
+  background: none;
+  border-radius: 20px;
+  padding-bottom: 20px;
+  box-shadow: #7d7d7d 5px 5px 5px 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#worksJS .cards .cardJS img[alt="Project image"] {
+  width: 25vw;
+  height: 15vw;
+  border-radius: 10px 10px 0 0;
+  order: 1;
+}
+
+#worksJS .cards .cardJS h1 {
+  color: #000;
+  font-size: 4rem;
+  font-weight: bold;
+  margin-top: 2vw;
+  order: 2;
+}
+
+#worksJS .cards .cardJS p {
+  color: #000;
+  font-size: 1.2rem;
+  order: 3;
+}
+
+#worksJS .cards .cardJS .toolsDiv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  order: 4;
+}
+
+#worksJS .cards .cardJS img[alt*=tool] {
+  width: calc(1vw + 20px);
+}
+
+#worksJS .cards .cardJS .toolsDiv img[src*=typescript] {
+  width: calc(1vw + 10px);
+}
+
+#worksJS .cards .cardJS a {
+  text-decoration: none;
+  order: 5;
+}
+
+#worksJS .cards .cardJS a button {
+  width: 10vw;
+  height: 2vw;
+  background: none;
+  color: #000;
+  border: 2px solid #000;
+  font-weight: bold;
+  font-size: 1vw;
+  transition: background-color 0.2s;
+  margin-top: 0.52vw;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#worksJS .cards .cardJS a button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
 #contact {
   width: 100vw;
   background-color: #3a3a3a;
@@ -671,6 +805,10 @@ header .profile img {
   padding: 5px;
 }
 
+#contact input:focus {
+  border: none;
+}
+
 #contact #message {
   height: calc(2.45vw + 50px);
   width: calc(14.3vw + 225px);
@@ -691,6 +829,10 @@ header .profile img {
   transition: background-color 0.2s, color 0.2s;
   font-weight: bold;
   font-size: calc(0.5vw + 10px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 #contact input[type=button]:hover {

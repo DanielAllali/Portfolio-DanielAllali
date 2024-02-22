@@ -47,6 +47,12 @@
     cursor: pointer;
 }
 
+.toolsAndText img[src*="typescript"] {
+    width: 6vw;
+    margin-left: 15px;
+    border-radius: 1vw;
+}
+
 .toolsAndText img:hover {
     box-shadow: 3px 3px 3px 3px #aaa;
     transform: scale(1.1);

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simon</title>
+    <script defer src="./main.js"></script>
+    <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+    <div id="content">
+        <div id="squars">
+            <div id="redBlock" class="block"></div>
+            <div id="blueBlock" class="block"></div>
+            <div id="yellowBlock" class="block"></div>
+            <div id="greenBlock" class="block"></div>
+        </div>
+        <div id="scoresBox">
+            <h1 class="scoreH1">Score: <span id="score">0</span></h1>
+            <h1 class="scoreH1">Best score: <span id="bestScore">0</span></h1>
+        </div>
+    </div>
+    <div id="startDiv">
+        <button id="startBtn">Start</button>
+    </div>
+    <div id="lostDiv">
+        <h1>You lost!</h1>
+        <h1>score: <span id="lostScore"></span></h1>
+        <h1>Best score: <span id="lostBestScore"></span></h1>
+        <button id="playAgainBtn" onclick="playAgain()">Play again</button>
+    </div>
+    <div id="DONT_CLICK_WRAPPER"></div>
+</body>
+
+</html>

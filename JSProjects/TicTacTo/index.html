@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac To</title>
+    <script defer src="./app.js"></script>
+    <link rel="stylesheet" href="./app.css">
+    <link rel="icon" href="./images/ticTacToBorad.png">
+</head>
+
+<body>
+    <div class="container">
+        <div class="boardNStaff">
+            <div class="head">
+                <h1>Tic tac to</h1>
+                <h1>turn: <span id="turnElement">X</span></h1>
+            </div>
+            <table class="board">
+                <tr>
+                    <td id="cell1"><img src="./images/xHover.png" alt="" id="cellImg1"></td>
+                    <td id="cell2"><img src="./images/xHover.png" alt="" id="cellImg2"></td>
+                    <td id="cell3"><img src="./images/xHover.png" alt="" id="cellImg3"></td>
+                </tr>
+                <tr>
+                    <td id="cell4"><img src="./images/xHover.png" alt="" id="cellImg4"></td>
+                    <td id="cell5"><img src="./images/xHover.png" alt="" id="cellImg5"></td>
+                    <td id="cell6"><img src="./images/xHover.png" alt="" id="cellImg6"></td>
+                </tr>
+                <tr>
+                    <td id="cell7"><img src="./images/xHover.png" alt="" id="cellImg7"></td>
+                    <td id="cell8"><img src="./images/xHover.png" alt="" id="cellImg8"></td>
+                    <td id="cell9"><img src="./images/xHover.png" alt="" id="cellImg9"></td>
+                </tr>
+            </table>
+        </div>
+
+
+        <div class="stats">
+            <h1>Statistics:</h1>
+            <h1>Times X won: <span id="timeXwonElement">0</span></h1>
+            <h1>Times Circle won: <span id="timeCirclewonElement">0</span></h1>
+            <button id="restartStats">Restart</button>
+        </div>
+    </div>
+
+    <div id="winPopup">
+        <h1><span id="winner"></span></h1>
+        <button id="newGameBtn">New game</button>
+    </div>
+</body>
+
+</html>
