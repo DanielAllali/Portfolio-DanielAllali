@@ -10,10 +10,6 @@
     font-family: "normal";
 }
 
-body {
-    overflow-x: hidden;
-}
-
 
 .presentProject {
     width: 100vw;
@@ -35,7 +31,15 @@ body {
     text-align: center;
 }
 
-.presentProject button {
+.btnDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.presentProject a {
     margin-top: 10vw;
     width: calc(10vw + 100px);
     height: 40px;
@@ -45,11 +49,16 @@ body {
     font-size: 1rem;
     font-weight: bold;
     color: #000;
+    text-decoration: none;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     transition: background-color 0.2s, color 0.2s;
 }
 
-.presentProject button:hover {
+.presentProject a:hover {
     background-color: #000;
     color: #fff;
 }

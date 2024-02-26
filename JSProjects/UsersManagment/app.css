@@ -1,0 +1,473 @@
+/* setups */
+@font-face {
+    font-family: "regular";
+    src: url("./fonts/Roboto-Black.ttf");
+}
+
+@font-face {
+    font-family: "regularLighter";
+    src: url("./fonts/Roboto-Light.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "regularLighter";
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #96c4d1;
+}
+
+/* information inputs */
+
+.infoInputs {
+    width: 100vw;
+    height: 400px;
+    background-image: url("./images/topBgc.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.infoInputs .header {
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.infoInputs .header h1 {
+    font-size: 3rem;
+}
+
+.infoInputs form {
+    height: 50px;
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    box-shadow: #16282e 10px 5px 10px 5px;
+    padding: 10px;
+    transition: box-shadow 3s, backdrop-filter 3s;
+}
+
+.infoInputs form:hover {
+    box-shadow: none;
+    backdrop-filter: none;
+}
+
+.infoInputs form label {
+    font-size: calc(0.4rem + 0.8vw);
+    margin-right: 10px;
+    margin-left: 20px;
+    color: #000;
+}
+
+.infoInputs form input {
+    width: 15vw;
+    height: 30px;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 3px;
+    border: none;
+    border-bottom: 3px solid #396978;
+    background-color: #eafaff;
+}
+
+.infoInputs form input:focus {
+    border: none;
+}
+
+.infoInputs form input[type="button"] {
+    width: 100px;
+    height: 30px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    border: none;
+    margin-left: 20px;
+    cursor: pointer;
+    transition: box-shadow 2s, background-color 2s;
+}
+
+.infoInputs form input[type="button"]:hover {
+    border: none;
+    box-shadow: #16282e 10px 5px 10px 5px;
+    background-color: #7adeff;
+}
+
+/* search user */
+.usersSearch {
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    backdrop-filter: blur(5px);
+    transition: box-shadow 3s, backdrop-filter 3s;
+}
+
+.searchUser {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchUser label {
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+
+.searchUser input[type="text"] {
+    width: 200px;
+    height: 30px;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 3px 0 0 3px;
+    border: none;
+    border-bottom: 3px solid #396978;
+    background-color: #eafaff;
+}
+
+.searchUser input[type="text"]:focus {
+    border: none;
+}
+
+.searchUser input[type="button"] {
+    width: 50px;
+    height: 30px;
+    background-color: #eafaff;
+    border: none;
+    cursor: pointer;
+    border-bottom: 3px solid #396978;
+    transition: background-color 0.4s;
+}
+
+.searchUser input[type="button"]:hover {
+    background-color: #7db6c8;
+}
+
+#foundUsers {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+
+}
+
+#foundUsers button {
+    width: 100px;
+    height: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#foundUsers button:hover {
+    border: 1px solid #000;
+}
+
+#userFound {
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 10vw;
+    left: 15vw;
+    display: none;
+}
+
+#userFound #closeFoundUsers {
+    color: red;
+    font-size: 2rem;
+    font-family: "regular";
+    position: absolute;
+    left: 95%;
+    cursor: pointer;
+}
+
+#userFound tr {
+    width: 70vw;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#userFound tr td {
+    color: white;
+}
+
+/* users information */
+
+.container {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+}
+
+.container table#usersInfoTable {
+    width: 70vw;
+    height: 50vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #000;
+}
+
+.container table#usersInfoTable tr {
+    width: 70vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: black;
+    border-bottom: 1px solid #000;
+}
+
+.container table#usersInfoTable tr td {
+    width: 10vw;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.container table#usersInfoTable tr.tableHeader {
+    background-color: #396978;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.container table#usersInfoTable tr.tableHeader td {
+    font-size: 1.5rem;
+    font-family: "regular";
+}
+
+.container table#usersInfoTable tr td .controlBtn {
+    width: 80px;
+    height: 20px;
+    cursor: pointer;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-family: "regular";
+    transition: background-color 0.2s;
+}
+
+/* control td */
+.container table#usersInfoTable tr td.controlTd {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.container table#usersInfoTable tr td.controlTd .uniqueID {
+    grid-column: 1/-1;
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* -------available button------- */
+.container table#usersInfoTable tr td .availableBtn {
+    background-color: #00da00;
+    border: none;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.container table#usersInfoTable tr td .availableBtn:hover {
+    background-color: #00fb00;
+}
+
+/* -------unavailable button------- */
+.container table#usersInfoTable tr td .unavailableBtn {
+    background-color: goldenrod;
+    border: none;
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.container table#usersInfoTable tr td .unavailableBtn:hover {
+    background-color: gold;
+}
+
+/* -------delete button------- */
+.container table#usersInfoTable tr td .deleteBtn {
+    background-color: #aa0000;
+    border: none;
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.container table#usersInfoTable tr td .deleteBtn:hover {
+    background-color: red;
+}
+
+
+
+/* --------------------------------responsive-------------------------------- */
+/* --------------------------------responsive-------------------------------- */
+@media (max-width:1770px) {
+    .container table#usersInfoTable {
+        width: 90vw;
+    }
+
+    .container table#usersInfoTable tr {
+        width: 90vw;
+        justify-content: space-around;
+    }
+
+    .container table#usersInfoTable tr td {
+        font-size: 1rem;
+    }
+
+    .container table#usersInfoTable tr td {
+        flex-direction: column;
+    }
+
+    .container table#usersInfoTable tr td.controlTd {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width:1160px) {
+    .container table#usersInfoTable tr {
+        justify-content: space-between;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .container table#usersInfoTable tr td {
+        font-size: 0.8rem;
+        flex-direction: column;
+    }
+
+    .container table#usersInfoTable tr.tableHeader {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .container table#usersInfoTable tr.tableHeader td {
+        font-size: 1rem;
+    }
+
+    .container table#usersInfoTable tr td .controlBtn {
+        width: 60px;
+        height: 12px;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 5px;
+        padding: 10px;
+        font-size: 0.7rem;
+    }
+
+    .infoInputs form {
+        height: auto;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: none;
+        backdrop-filter: none;
+        margin-top: 10px;
+        margin: 0 auto;
+    }
+
+    .infoInputs form input {
+        width: 200px;
+    }
+
+    .infoInputs form label {
+        font-size: 1rem;
+    }
+
+    #userFound {
+        width: 95vw;
+        left: 0;
+        left: 2vw;
+    }
+
+    #userFound tr {
+        width: 90vw;
+        justify-content: space-between;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+@media (max-width:770px) {
+    .container table#usersInfoTable tr {
+        justify-content: space-around;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container table#usersInfoTable tr td {
+        font-size: 0.7rem;
+    }
+
+    .container table#usersInfoTable tr.tableHeader td {
+        font-size: 0.8rem;
+    }
+
+    .container table#usersInfoTable tr.tableHeader {
+        justify-content: space-between;
+    }
+
+    .container table#usersInfoTable tr.tableHeader td {
+        font-size: 0.5rem;
+    }
+
+    .container table#usersInfoTable tr td .controlBtn {
+        width: 50px;
+        height: 12px;
+        font-size: 0.6rem;
+    }
+
+    .usersSearch {
+        backdrop-filter: blur(2px);
+    }
+
+    #userFound tr td {
+        font-size: calc(0.4rem + 1vw);
+    }
+}

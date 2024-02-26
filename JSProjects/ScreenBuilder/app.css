@@ -1,0 +1,177 @@
+@font-face {
+    font-family: "light";
+    src: url("./fonts/Roboto-Light.ttf");
+}
+
+@font-face {
+    font-family: "bold";
+    src: url("./fonts/Roboto-Bold.ttf");
+}
+
+@font-face {
+    font-family: "normal";
+    src: url("./fonts/Roboto-Regular.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "light";
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/*  -----------Paper And Container----------- */
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.paperBg {
+    width: 80vw;
+    height: 100vh;
+    background: #E3DFDC;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    order: 2;
+}
+
+#paper {
+    width: 60vw;
+    height: 90vh;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: #ccc 5px 5px 5px 5px;
+    overflow-y: scroll;
+}
+
+#paper table {
+    width: 60vw;
+    height: 90vh;
+    border-collapse: collapse;
+}
+
+#paper table tr {
+    width: 60vw;
+    height: 18vh;
+}
+
+#paper table tr td {
+    width: 12px;
+    height: 18vh;
+    border: 1px solid #000;
+}
+
+/*  -----------Settings----------- */
+.settings {
+    width: 20vw;
+    height: 100vh;
+    background-image: url("./images/settingsBg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    order: 1;
+}
+
+.settings h1 {
+    font-size: 2rem;
+    color: black;
+}
+
+.settings form {
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    backdrop-filter: blur(2px);
+    padding: 10px;
+}
+
+/* errors */
+.settings form h4 {
+    color: red;
+    display: none;
+}
+
+.settings form label {
+    color: black;
+    font-family: "bold";
+    font-size: calc(0.7vw + 10px);
+    margin-top: 40px;
+}
+
+.settings form input,
+select,
+textarea {
+    width: 18vw;
+    height: 40px;
+    background: none;
+    border: 2px solid black;
+    border-radius: 5px;
+    color: #000;
+    padding: 10px;
+    font-family: "bold";
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.settings form textarea {
+    height: 200px;
+    resize: none;
+}
+
+.settings form .directionRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.settings form .directionRow div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.settings form .directionRow input {
+    width: 8vw;
+    height: 40px;
+}
+
+.settings form select {
+    width: 8vw;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.settings form select option {
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+.settings form input[type="button"] {
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.settings form input[type="button"]:hover {
+    background-color: black;
+    color: white;
+}
+
+
+@media (max-width:850px) {
+    .directionRow {
+        flex-direction: column;
+    }
+}

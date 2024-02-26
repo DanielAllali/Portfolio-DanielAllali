@@ -1,0 +1,362 @@
+/* settings */
+@font-face {
+    font-family: "regular";
+    src: url("./fonts/Roboto-Black.ttf");
+}
+
+@font-face {
+    font-family: "regularLighter";
+    src: url("./fonts/Roboto-Light.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "regular";
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-image: url("./images/bodyBackground.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#container {
+    width: 80vw;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.toDoHeader {
+    width: 230px;
+    font-size: 3rem;
+    margin: 0 auto;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: calc(50vw - 115px);
+    z-index: 999;
+}
+
+/* -----------------tasks list----------------- */
+/* -----------------tasks list----------------- */
+/* -----------------tasks list----------------- */
+#Tasks {
+    width: 50vw;
+    height: 90vh;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    border: none;
+    border-radius: 10px;
+    background-color: #be5e19;
+    box-shadow: 5px 5px 5px #ff7e22;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+
+#Tasks:hover {
+    box-shadow: none;
+    transform: scale(0.99);
+}
+
+#Tasks .taskList {
+    width: 45vw;
+    height: 35vh;
+    border-bottom: 3px solid #000;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+/* -----------------tasks----------------- */
+/* -----------------tasks----------------- */
+/* -----------------tasks----------------- */
+#Tasks #toDoTasks .task {
+    width: 40vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 10px;
+    border: 2px solid #000;
+    border-radius: 10px;
+}
+
+.taskName {
+    font-size: 1.5rem;
+    color: #000;
+
+}
+
+#Tasks #toDoTasks .task .btnDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+#Tasks #toDoTasks .task .btnDiv button {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+/* delete btn */
+#Tasks #toDoTasks .task .btnDiv .deleteTask {
+    background-color: darkred;
+}
+
+#Tasks #toDoTasks .task .btnDiv .deleteTask:hover {
+    background-color: #ab0000;
+}
+
+/* change name btn */
+#Tasks #toDoTasks .task .btnDiv .changeTask {
+    background-color: #793c10;
+}
+
+#Tasks #toDoTasks .task .btnDiv .changeTask:hover {
+    background-color: #964a14;
+}
+
+/* done task btn */
+#Tasks #toDoTasks .task .btnDiv .doneTask {
+    background-color: darkgreen;
+}
+
+#Tasks #toDoTasks .task .btnDiv .doneTask:hover {
+    background-color: green;
+}
+
+/* -----------------Done tasks----------------- */
+/* -----------------Done tasks----------------- */
+/* -----------------Done tasks----------------- */
+#Tasks #doneTasks {
+    border: none;
+}
+
+/* -----------------Settings----------------- */
+/* -----------------Settings----------------- */
+/* -----------------Settings----------------- */
+
+#settings {
+    width: 25vw;
+    height: 75vh;
+    border: none;
+}
+
+#settings form {
+    width: 25vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #be5e19;
+    box-shadow: 10px 10px 10px #ff7e22;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+
+#settings .inputAndNameErrorDiv {
+    height: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#settings .inputAndNameErrorDiv h1 {
+    font-size: 0.8rem;
+    color: darkred;
+    display: none;
+}
+
+#settings form:hover {
+    box-shadow: none;
+    transform: scale(0.99);
+}
+
+#settings form label {
+    margin-right: 10px;
+    color: white;
+}
+
+#settings form input[type="text"] {
+    width: 10vw;
+    height: 30px;
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    background: none;
+    color: white;
+    font-family: "regularLighter";
+}
+
+#settings form input[type="button"] {
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+    border-radius: 5px;
+    border: 1px solid #000;
+    background: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.2s, border 0.2s;
+}
+
+#settings form input[type="button"]:hover {
+    background-color: #793c10;
+}
+
+/* -----------------change task name popup----------------- */
+/* -----------------change task name popup----------------- */
+/* -----------------change task name popup----------------- */
+#changeNamePopup {
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(0);
+    opacity: 0;
+    position: absolute;
+    top: -100px;
+    left: 0;
+    z-index: 99999;
+    transition: backdrop-filter 1s, top 1s, opacity 1s;
+}
+
+#changeNamePopup label {
+    color: white;
+    font-size: 1.2rem;
+    font-family: "regularLighter";
+}
+
+#changeNamePopup input {
+    width: calc(10vw + 100px);
+    height: 25px;
+    color: white;
+    font-size: 1rem;
+    font-family: "regularLighter";
+    padding: 5px;
+    margin-top: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background: none;
+}
+
+#changeNamePopup input[type="button"] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+#changeNamePopup input[type="button"]:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+#changeNamePopup h1 {
+    font-size: 0.8rem;
+    font-family: "regularLighter";
+    color: darkred;
+    display: none;
+}
+
+
+/* ---------------------------RESPONSIVE--------------------------- */
+/* ---------------------------RESPONSIVE--------------------------- */
+/* ---------------------------RESPONSIVE--------------------------- */
+/* ---------------------------RESPONSIVE--------------------------- */
+@media (max-width:1000px) {
+    #container {
+        height: 80vh;
+        width: 80vw;
+        margin: 0 auto;
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #Tasks {
+        width: 90vw;
+        box-shadow: none;
+        order: 2;
+    }
+
+    #Tasks:hover {
+        /* so it dont change */
+        transform: scale(1);
+    }
+
+    #Tasks .taskList {
+        width: 75vw;
+        height: 35vh;
+    }
+
+    #Tasks #toDoTasks {
+        margin-top: 20px;
+    }
+
+    #Tasks #toDoTasks .task {
+        width: 70vw;
+    }
+
+    #Tasks #toDoTasks .task .btnDiv {
+        margin-left: 10px;
+    }
+
+    #Tasks #toDoTasks .task .btnDiv button {
+        width: 25px;
+        height: 25px;
+        font-size: 1rem;
+        border-radius: 2.5px;
+    }
+
+    #settings {
+        width: 90vw;
+        position: relative;
+        z-index: 99;
+        order: 1;
+    }
+
+
+    #settings form {
+        width: 90vw;
+        box-shadow: none;
+        margin-bottom: -20px;
+    }
+
+    #settings form:hover {
+        /* so it dont change */
+        transform: scale(1);
+    }
+
+    #settings form input[type="text"] {
+        width: 60vw;
+    }
+}

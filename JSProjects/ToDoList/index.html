@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do list</title>
+    <script defer src="./app.js"></script>
+    <link rel="stylesheet" href="./app.css">
+    <link rel="icon" href="./images/toDoListIcon.png">
+</head>
+
+<body>
+    <h1 class="toDoHeader">To Do List</h1>
+    <div id="container">
+        <div id="Tasks">
+            <div id="toDoTasks" class="taskList">
+                <!-- TASK BUILD -->
+                <!-- <div class="task">
+                    <h1 class="taskName">example task</h1>
+                    <div class="btnDiv">
+                        <button class="deleteTask">&#10005;</button>
+                        <button class="changeTask">&#9998;</button>
+                        <button class="doneTask">&#x2713;</button>
+                    </div>
+                </div> -->
+            </div>
+            <div id="doneTasks" class="taskList">
+                <!-- DONE TASK BUILD -->
+                <!-- <div class="task">
+                    <s class="taskName">example done task</s>
+                </div> -->
+            </div>
+        </div>
+        <div id="settings">
+            <form>
+                <label for="taskNameInput">Task name:</label>
+                <div class="inputAndNameErrorDiv">
+                    <input required type="text" id="taskNameInput">
+                    <h1 id="startNameError">name can't be empty</h1>
+                </div>
+                <input type="button" value="&plus;" id="addTask">
+            </form>
+        </div>
+    </div>
+    <!-- change task name popup -->
+    <!-- EXAMPLE BUILD -->
+    <!-- <div id="changeNamePopup">
+        <label for="newNameInput">Change name:</label>
+        <input required type="text" id="newNameInput">
+        <h1 id="nameError"></h1>
+        <input type="button" value="Send" id="sendNameBtn">
+    </div> -->
+</body>
+
+</html>

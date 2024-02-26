@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users Managment</title>
+    <script defer src="./app.js"></script>
+    <link rel="stylesheet" href="./app.css">
+    <link rel="icon" href="./images/webIconPeople.png">
+</head>
+
+<body>
+    <div class="infoInputs">
+        <div class="header">
+            <h1>To register</h1>
+            <p>Fill your information!</p>
+        </div>
+        <form>
+            <label for="firstNameInput">First name:</label>
+            <input value="First name" type="text" id="firstNameInput" required>
+
+            <label for="lastNameInput">Last name:</label>
+            <input value="Last name" type="text" id="lastNameInput">
+
+            <label for="emailInput">Email:</label>
+            <input value="Email" type="email" id="emailInput" required>
+
+            <label for="passwordInput">Password:</label>
+            <input type="password" id="passwordInput" required>
+
+            <input type="button" value="Send" id="sendBtn">
+        </form>
+
+        <div class="usersSearch">
+            <div class="searchUser">
+                <label for="searchIdInput">Search for user:</label>
+                <input type="text" id="searchIdInput" value="ID">
+                <input type="button" value="&#x1F50D;" id="searchBtn">
+            </div>
+            <div id="foundUsers">
+                <!-- buttons of users -->
+            </div>
+        </div>
+    </div>
+    <table id="userFound">
+        <td id="closeFoundUsers">X</td>
+        <!-- tr of the user that found -->
+        <!-- EXAMPLE OF USER INFO -->
+        <!-- <tr>
+            <td>first name</td>
+            <td>last name</td>
+            <td>example.Email@gmail.com</td>
+            <td>password</td>
+            <td>availability</td>
+        </tr> -->
+    </table>
+
+    <div class="container">
+        <h1>Users list:</h1>
+        <table id="usersInfoTable">
+            <tr class="tableHeader">
+                <td>First name</td>
+                <td>Last name</td>
+                <td>Email</td>
+                <td>Password</td>
+                <td>Availability</td>
+                <td>Control</td>
+            </tr>
+            <!-- EXAMPLE USER INFORMATION BUILD -->
+            <!-- <tr id="userInfo${user.ID}">
+                <td>${user.FirstName}</td>
+                <td>${user.LastName}</td>
+                <td>${user.Email}</td>
+                <td>${user.Password}</td>
+                <td id="userAvailability${user.ID}">${user.Availability}</td>
+                <td>
+                    <button class="controlBtn availableBtn" id="availableBtn${user.ID}">Available</button>
+                    <button class="controlBtn unavailableBtn" id="unavailableBtn${user.ID}">Unavailable</button>
+                    <button class="controlBtn deleteBtn" id="deleteBtn${user.ID}">Delete</button>
+                </td>
+            </tr> -->
+        </table>
+    </div>
+</body>
+
+</html>
