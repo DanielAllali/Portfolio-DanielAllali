@@ -307,20 +307,21 @@
         <!-- contact -->
         <section id="contact">
             <img src="./Images/Rectangle 41.png" alt="mail Image">
-            <form>
+            <form id="contactForm">
                 <h1>Contact</h1>
                 <p>
                     Fill out the form if you'r interested.
                 </p>
                 <label for="fullName"> Full name</label>
-                <input type="text" id="fullName" onfocus="onFocusName()" onblur="onBlurName()">
+                <input type="text" id="fullName" required onfocus="onFocusName()" onblur="onBlurName()">
                 <label for="email">Email</label>
-                <input type="text" id="email" onfocus="onFocusEmail()" onblur="onBlurEmail()">
+                <input required type="email" id="email" onfocus="onFocusEmail()" onblur="onBlurEmail()">
                 <label for="phone">Phone number</label>
-                <input type="text" id="phone" onfocus="onFocusPhone()" onblur="onBlurPhone()">
+                <input required type="text" id="phone" onfocus="onFocusPhone()" onblur="onBlurPhone()">
                 <label for="message">Message content</label>
-                <textarea type="text" id="message" onfocus="onFocusMessage()" onblur="onBlurMessage()"></textarea>
-                <input type="button" value="Send">
+                <textarea required type="message" id="message" onfocus="onFocusMessage()"
+                    onblur="onBlurMessage()"></textarea>
+                <input type="submit" value="Send">
             </form>
         </section>
         <footer>

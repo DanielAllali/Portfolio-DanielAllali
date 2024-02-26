@@ -61,7 +61,7 @@
     resize: none;
 }
 
-#contact input[type="button"] {
+#contact input[type="submit"] {
     width: 8.6vw;
     height: calc(1.3vw + 25px);
     border-radius: 10px;
@@ -77,7 +77,7 @@
     justify-content: center;
 }
 
-#contact input[type="button"]:hover {
+#contact input[type="submit"]:hover {
     background-color: #fff;
     color: #000;
 }

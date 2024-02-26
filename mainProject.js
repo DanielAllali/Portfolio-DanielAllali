@@ -80,3 +80,26 @@ function onBlurMessage() {
     }
 }
 
+
+
+/* prevent refresh on submit (contact) */
+
+const contactForm = document.getElementById("contactForm");
+
+const preventRefresh = (myEvent) => {
+    myEvent.preventDefault();
+
+    const fullName = document.getElementById("fullName").value;
+    const email = document.getElementById("email").value;
+    const phone = document.getElementById("phone").value;
+    const message = document.getElementById("message").value;
+
+    if (fullName == "Full name" || fullName == "" ||
+        email == "Email" || email == "" ||
+        phone == "phone" || phone == "" ||
+        message == "message" || message == "") {
+        alert("Please fill out all required fields.");
+    }
+}
+
+contactForm.addEventListener("submit", preventRefresh);

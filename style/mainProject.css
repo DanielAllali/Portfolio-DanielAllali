@@ -14,8 +14,6 @@ body {
   display: none;
   opacity: 0;
   transition: opacity 1s;
-  display: block;
-  opacity: 1;
 }
 
 @font-face {
@@ -35,7 +33,6 @@ body {
   align-items: center;
   opacity: 1;
   transition: opacity 1s;
-  display: none;
 }
 
 #loadingDiv .circle {
@@ -819,7 +816,7 @@ header .profile img {
   resize: none;
 }
 
-#contact input[type=button] {
+#contact input[type=submit] {
   width: 8.6vw;
   height: calc(1.3vw + 25px);
   border-radius: 10px;
@@ -835,7 +832,7 @@ header .profile img {
   justify-content: center;
 }
 
-#contact input[type=button]:hover {
+#contact input[type=submit]:hover {
   background-color: #fff;
   color: #000;
 }
