@@ -622,15 +622,11 @@ header .profile img {
     font-size: 3vw;
     width: 85vw;
   }
-  #Gallery .works a {
+  #Gallery .works a button {
     width: 40vw;
     height: 5vw;
     font-size: 3vw;
     padding-top: 0;
-  }
-  #Gallery .works a:hover {
-    background-color: #fff;
-    color: #0078B7;
   }
 }
 .collusionDiv {
@@ -652,7 +648,7 @@ header .profile img {
 }
 
 #worksJS > h1 {
-  font-size: 5rem;
+  font-size: calc(3rem + 1vw);
   color: black;
   border-bottom: 2px solid #000;
   margin-bottom: 20px;
@@ -698,7 +694,7 @@ header .profile img {
 
 #worksJS .cards .cardJS h1 {
   color: #000;
-  font-size: 4rem;
+  font-size: 2vw;
   font-weight: bold;
   margin-top: 2vw;
   order: 2;
@@ -706,7 +702,8 @@ header .profile img {
 
 #worksJS .cards .cardJS p {
   color: #000;
-  font-size: 1.2rem;
+  font-size: 1vw;
+  text-align: center;
   order: 3;
 }
 
@@ -753,6 +750,42 @@ header .profile img {
   color: #fff;
 }
 
+/* responsive */
+@media (max-width: 630px) {
+  #worksJS {
+    padding-bottom: 0;
+  }
+  #worksJS > h1 {
+    font-size: 1rem;
+    border: none;
+    margin-bottom: 10px;
+  }
+  #worksJS .cards .cardRow {
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 0;
+  }
+  #worksJS .cards .cardJS {
+    width: 90vw;
+    margin-bottom: 50px;
+  }
+  #worksJS .cards .cardJS img[alt="Project image"] {
+    width: 90vw;
+    height: 40vw;
+  }
+  #worksJS .cards .cardJS h1 {
+    font-size: 0.8rem;
+    margin-top: 0;
+  }
+  #worksJS .cards .cardJS p {
+    font-size: 0.6rem;
+  }
+  #worksJS .cards .cardJS a button {
+    width: 15vw;
+    height: 5vw;
+    font-size: 2vw;
+  }
+}
 #contact {
   width: 100vw;
   background-color: #3a3a3a;
@@ -817,7 +850,7 @@ header .profile img {
 }
 
 #contact input[type=submit] {
-  width: 8.6vw;
+  width: 200px;
   height: calc(1.3vw + 25px);
   border-radius: 10px;
   background: none;

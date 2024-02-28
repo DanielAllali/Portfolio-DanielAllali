@@ -11,7 +11,7 @@
 }
 
 #worksJS>h1 {
-    font-size: 5rem;
+    font-size: calc(3rem + 1vw);
     color: black;
     border-bottom: 2px solid #000;
     margin-bottom: 20px;
@@ -59,7 +59,7 @@
 
 #worksJS .cards .cardJS h1 {
     color: #000;
-    font-size: 4rem;
+    font-size: 2vw;
     font-weight: bold;
     margin-top: 2vw;
     order: 2;
@@ -67,7 +67,8 @@
 
 #worksJS .cards .cardJS p {
     color: #000;
-    font-size: 1.2rem;
+    font-size: 1vw;
+    text-align: center;
     order: 3;
 }
 
@@ -112,4 +113,50 @@
 #worksJS .cards .cardJS a button:hover {
     background-color: #000;
     color: #fff;
+}
+
+
+/* responsive */
+
+@media (max-width:630px) {
+    #worksJS {
+        padding-bottom: 0;
+    }
+
+    #worksJS>h1 {
+        font-size: 1rem;
+        border: none;
+        margin-bottom: 10px;
+    }
+
+    #worksJS .cards .cardRow {
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 0;
+    }
+
+    #worksJS .cards .cardJS {
+        width: 90vw;
+        margin-bottom: 50px;
+    }
+
+    #worksJS .cards .cardJS img[alt="Project image"] {
+        width: 90vw;
+        height: 40vw;
+    }
+
+    #worksJS .cards .cardJS h1 {
+        font-size: 0.8rem;
+        margin-top: 0;
+    }
+
+    #worksJS .cards .cardJS p {
+        font-size: 0.6rem;
+    }
+
+    #worksJS .cards .cardJS a button {
+        width: 15vw;
+        height: 5vw;
+        font-size: 2vw;
+    }
 }
